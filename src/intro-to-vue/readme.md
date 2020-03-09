@@ -21,3 +21,4 @@
 - [Nuxt.js](https://nuxtjs.org/) has SSR and more. It is a framework built on top of Vue.js which makes it easier to setup a more complex web application by providing additional tooling.
 - `v-if`, `v-else-if`, `v-else`, `v-show`, `v-for` for conditional logic and looping
 - `v-bind:alt` or shorthand `:alt` for setting html attributes with dynamic data
+- Use `:key` when rendering a list to help vue keep track of the order of the list.
