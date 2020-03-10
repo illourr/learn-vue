@@ -25,3 +25,4 @@
 - `@click` is a shorthand for `v-on:click`
 - `:style` can be used to bind to dynamic styles. Use an object for easily defining multiple css properties.
 - `:class` binding can dynamically add classes using conditionals
+-
