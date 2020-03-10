@@ -8,8 +8,8 @@
 - [x] 2. Attribute Binding
 - [x] 3. Conditional Rendering
 - [x] 4. List Rendering
-- [ ] 5. Event Handling
-- [ ] 6. Class & Style Binding
+- [x] 5. Event Handling
+- [x] 6. Class & Style Binding
 - [ ] 7. Computed Properties
 - [ ] 8. Components
 - [ ] 9. Communicating Events
@@ -22,3 +22,6 @@
 - `v-if`, `v-else-if`, `v-else`, `v-show`, `v-for` for conditional logic and looping
 - `v-bind:alt` or shorthand `:alt` for setting html attributes with dynamic data
 - Use `:key` when rendering a list to help vue keep track of the order of the list.
+- `@click` is a shorthand for `v-on:click`
+- `:style` can be used to bind to dynamic styles. Use an object for easily defining multiple css properties.
+- `:class` binding can dynamically add classes using conditionals

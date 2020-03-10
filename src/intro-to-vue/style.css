@@ -33,6 +33,10 @@ img {
   width: 50%;
 }
 
+.product-out-of-stock {
+  text-decoration: line-through;
+}
+
 .color-box {
   width: 40px;
   height: 40px;

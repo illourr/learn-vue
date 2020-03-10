@@ -16,17 +16,39 @@
         <span>
           <p v-if="inventory > 10">In Stock</p>
           <p v-else-if="inventory <= 10 && inventory > 0">Almost Sold Out!</p>
-          <p v-else>Out of Stock</p>
+          <p v-else class="product-out-of-stock">Out of Stock</p>
         </span>
         <ul>
           <li v-for="detail in details" :key="detail">{{detail}}</li>
         </ul>
         <div v-for="variant in variants" :key="variant.variantId">
-          <p>{{variant.variantColor}}</p>
+          <div
+            @mouseover="updateProduct(variant.variantImage)"
+            @mouseleave="updateProduct(defaultImage)"
+            class="color-box"
+            :style="{
+          backgroundColor: variant.variantColor}"
+          ></div>
         </div>
-        <span v-for="size in sizes" :key="size">
-          {{size}}
-        </span>
+        <div>
+          <span v-for="size in sizes" :key="size">
+            {{size}}
+          </span>
+        </div>
+        <button
+          @click="addToCart"
+          :disabled="!inStock"
+          :class="{ disabledButton: !inStock}"
+        >
+          Add to Cart
+        </button>
+
+        <div class="cart">
+          <p>Cart({{cart}})</p>
+        </div>
+        <button @click="removeFromCart" v-show="cart > 0">
+          Remove from Cart
+        </button>
       </div>
     </div>
   </div>
