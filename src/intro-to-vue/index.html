@@ -4,51 +4,9 @@
     <title>Product App</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+  <div class="nav-bar"></div>
   <div id="app">
-    <div class="nav-bar"></div>
-    <div class="product">
-      <div class="product-image">
-        <img :src="image" :alt="product" />
-      </div>
-      <div class="product-info">
-        <h1 :style="{color: onSale && 'palevioletred'}">{{title}}</h1>
-        <p v-show="onSale">On Sale</p>
-        <span>
-          <p v-if="inStock">In Stock</p>
-          <p v-else class="product-out-of-stock">Out of Stock</p>
-        </span>
-        <ul>
-          <li v-for="detail in details" :key="detail">{{detail}}</li>
-        </ul>
-        <div v-for="(variant, index) in variants" :key="variant.variantId">
-          <div
-            @mouseover="updateProduct(index)"
-            class="color-box"
-            :style="{
-          backgroundColor: variant.variantColor}"
-          ></div>
-        </div>
-        <div>
-          <span v-for="size in sizes" :key="size">
-            {{size}}
-          </span>
-        </div>
-        <button
-          @click="addToCart"
-          :disabled="!inStock"
-          :class="{ disabledButton: !inStock}"
-        >
-          Add to Cart
-        </button>
-
-        <div class="cart">
-          <p>Cart({{cart}})</p>
-        </div>
-        <button @click="removeFromCart" v-show="cart > 0">
-          Remove from Cart
-        </button>
-      </div>
-    </div>
+    <product :premium="premium"></product>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="main.js"></script>

@@ -11,7 +11,7 @@
 - [x] 5. Event Handling
 - [x] 6. Class & Style Binding
 - [x] 7. Computed Properties
-- [ ] 8. Components
+- [x] 8. Components
 - [ ] 9. Communicating Events
 - [ ] 10. Forms
 - [ ] 11. Tabs
@@ -26,3 +26,5 @@
 - `:style` can be used to bind to dynamic styles. Use an object for easily defining multiple css properties.
 - `:class` binding can dynamically add classes using conditionals
 - `computed` key can be used to combine or mutate data before displaying it.
+- Use `Vue.component` to create a reusable component which can accept props.
+- Component's `data` key needs to be an object which returns data.
