@@ -10,7 +10,7 @@
 - [x] 4. List Rendering
 - [x] 5. Event Handling
 - [x] 6. Class & Style Binding
-- [ ] 7. Computed Properties
+- [x] 7. Computed Properties
 - [ ] 8. Components
 - [ ] 9. Communicating Events
 - [ ] 10. Forms
@@ -25,4 +25,4 @@
 - `@click` is a shorthand for `v-on:click`
 - `:style` can be used to bind to dynamic styles. Use an object for easily defining multiple css properties.
 - `:class` binding can dynamically add classes using conditionals
--
+- `computed` key can be used to combine or mutate data before displaying it.
